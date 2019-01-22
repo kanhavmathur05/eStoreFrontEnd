@@ -20,7 +20,7 @@
                     <td>${product.price}</td>
                     <td>${product.quantity}</td>
                     <td>${product.productDescription}</td>
-                	<td><img alt="${product.imageName}" src="<c:url value="/resources/images/${product.imageName}"/>" class="img-responsive" style="max-width:100px" ></td>
+                	<td><img alt="No Image Found" src="<c:url value="/resources/images/${product.productID}.png"/>" class="img-responsive" style="max-width:100px" ></td>
                 	<td><a href="<c:url value="viewProduct/${product.productID}"/>">View </a><a href="<c:url value="/deleteProduct/${product.productID}"/>">Delete</a><a href="<c:url value="/updateProduct/${product.productID}"/>">Update</a></td>
                 </tr>
             </c:forEach>

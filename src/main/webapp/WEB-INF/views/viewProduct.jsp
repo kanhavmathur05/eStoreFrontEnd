@@ -6,7 +6,7 @@
 <div class="container">
 <div class="row">
 	<div class="col-sm-6">
-		<img alt="${product.imageName}" src="<c:url value="/resources/images/${product.imageName}"/>" class="img-responsive">		
+		<img alt="Image not Found" src="<c:url value="/resources/images/${product.productID}.png"/>" class="img-responsive">		
 	</div>
 	<div class="col-sm-6">
 		<div class="row">

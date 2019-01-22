@@ -3,7 +3,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 		
  
-<form:form action="${pageContext.request.contextPath }/updateProduct/${productID}" modelAttribute="product" method="post" >
+<form:form action="${pageContext.request.contextPath }/updateProduct/${productID}" modelAttribute="product" method="post" enctype="multipart/form-data">
 
 	<div class="form-group">
 		<label for="name">Name</label>
@@ -27,9 +27,9 @@
         <form:input path="quantity" id="quantity" class="form-Control" />
 	</div>
 	<div class="form-group">
-		<label for="image">Image Name</label>
-		<form:errors path="imageName" cssStyle="color:#ff0000;" />
-        <form:input path="imageName" id="image" class="form-Control" />
+		<label for="productImage">Image Name</label>
+		<form:errors path="productImage" cssStyle="color:#ff0000;" />
+        <form:input path="productImage" id="image" type="file" class="form:input-large"/>
 	</div>
 	<div class="form-group">
 		<label for="category">Category</label>
