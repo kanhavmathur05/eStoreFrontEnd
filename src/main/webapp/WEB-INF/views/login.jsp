@@ -1,28 +1,36 @@
 <%@ include file="header.jsp" %>
+	<div id="login-box">
 
-    <div class="container-fluid">
-      <div class="row  align-middle">
-        <div class="col-sm-4 col-sm-offset-4">
-        <!--  <h2 class="text-center">Welcome back.</h2>-->
-          <form role="form">
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      </div>
-      
-      <div class="checkbox">
-        <label>
-          <input type="checkbox"> Remember me
-        </label>
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-        </div>
-      </div>
-    </div>
+		<h2>Login with Username and Password</h2>
 
-<%@ include file="footer.jsp" %>
+		<c:if test="${not empty error}">
+			<div class="error">${error}</div>
+		</c:if>
+		<c:if test="${not empty msg}">
+			<div class="msg">${msg}</div>
+		</c:if>
+
+		<form name='loginForm'
+		  action="<c:url value='/login' />" method='POST'>
+
+		  <table>
+			<tr>
+				<td>User:</td>
+				<td><input type='text' name='username'></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type='password' name='password' /></td>
+			</tr>
+			<tr>
+				<td colspan='2'><input name="submit" type="submit"
+					value="submit" /></td>
+			</tr>
+		  </table>
+
+		  <input type="hidden" name="${_csrf.parameterName}"
+			value="${_csrf.token}" />
+
+		</form>
+	</div>
+  <%@ include file="footer.jsp" %>

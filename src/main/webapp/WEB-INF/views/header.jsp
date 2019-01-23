@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="security"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,8 +32,24 @@
                     <li><a href="<c:url value="/addProduct"/>">Add Product</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="<c:url value="/signUp"/>"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="<c:url value="/login" />"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <c:if test="${pageContext.request.userPrincipal.name != null}">
+				<a>Welcome: ${pageContext.request.userPrincipal.name}</a>
+				<a href="<c:url value="/perform_logout" />">Logout</a>
+
+				<security:authorize access="hasRole('ROLE_USER')">
+					<a href="<c:url value="/user/home" />">Cart</a>
+				</security:authorize>
+
+				<security:authorize access="hasRole('ROLE_ADMIN')">
+					<a href="<c:url value="/admin/home" />">Admin Page</a>
+				</security:authorize>
+
+			</c:if>
+
+			<c:if test="${pageContext.request.userPrincipal.name == null}">
+				<a href="<c:url value="/login" />">Login</a>
+				<a href="<c:url value="/signUp" />">Sign Up</a>
+			</c:if>
                   </ul>
                 </div>
                 </div>
