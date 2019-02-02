@@ -6,7 +6,7 @@
   <div class="row  align-middle">
     <div class="col-sm-2 col-offset-2">
 
-<form:form action="${pageContext.request.contextPath}/addProduct" modelAttribute="product" method="post" enctype="multipart/form-data">
+<form:form action="${pageContext.request.contextPath}/admin/addProduct?${_csrf.parameterName}=${_csrf.token}" modelAttribute="product" method="post" enctype="multipart/form-data">
 	
 	<div class="form-group">
 		<label for="name">Name</label>
@@ -42,6 +42,7 @@
         <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="camera"/>Camera</label>
         <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="homeentertainment"/>Home Entertainment</label>
 	</div>
+	
 	<input type="submit" value="submit" class="btn btn-default"/>
 </form:form>
 </div>

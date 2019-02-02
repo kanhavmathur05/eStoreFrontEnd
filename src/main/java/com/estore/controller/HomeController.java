@@ -32,11 +32,6 @@ public class HomeController {
 	{
 		return "contactUs";
 	}
-	@GetMapping("/signUp")
-	public String signUp()
-	{
-		return "signUp";
-	}
 	
 	@RequestMapping(value="/perform_logout", method = RequestMethod.GET)
 	public String logoutPage (HttpServletRequest request, HttpServletResponse response) {
@@ -50,28 +45,28 @@ public class HomeController {
 	@GetMapping("/login")
 	public String login(@RequestParam(value="error", required = false)String error,@RequestParam(value="logout", required = false)String logout,Model model)
 	{
-		 if(error != null){
-	            model.addAttribute("error", "Invalid username and password");
+		 if(error!=null){
+	            model.addAttribute("error","Invalid username and password");
 	        }
-	        if (logout !=null){
-	            model.addAttribute("msg", "You have been logged out successfully");
+	        if (logout!=null){
+	            model.addAttribute("msg","You have been logged out successfully");
 	        }
 		return "login";
 	}
 
-	@RequestMapping(value = "/user/home", method = RequestMethod.GET)
+	@RequestMapping(value="/user/home", method = RequestMethod.GET)
 	public String userPage(Model model) {
 
 		model.addAttribute("title", "User Logged In Successfull!!!");
-		model.addAttribute("message", "This is Welcome page for User!");
-		return "user";
+		model.addAttribute("message","This is Welcome page for User!");
+		return "cart";
 	}
 
-	@RequestMapping(value = "/admin/home", method = RequestMethod.GET)
+	@RequestMapping(value="/admin/home", method = RequestMethod.GET)
 	public String adminPage(Model model) {
 
-		model.addAttribute("title", "Admin Logged In Successfull!!!");
-		model.addAttribute("message", "This is protected page for Admin!");
+		model.addAttribute("title","Admin Logged In Successfull!!!");
+		model.addAttribute("message","This is protected page for Admin!");
 
 		return "admin";
 

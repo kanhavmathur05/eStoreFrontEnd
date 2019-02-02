@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
 </head>
 <body>
 <header>
@@ -29,26 +30,30 @@
                     <li><a href="<c:url value="/aboutUs"/>">About Us</a>
                     </li>
                     <li><a href="<c:url value="/contactUs"/>">Contact Us</a></li>
-                    <li><a href="<c:url value="/addProduct"/>">Add Product</a></li>
+                    <security:authorize access="hasRole('ROLE_ADMIN')">
+                    <li><a href="<c:url value="/admin/addProduct"/>">Add Product</a></li>
+                	</security:authorize>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <c:if test="${pageContext.request.userPrincipal.name != null}">
-				<a>Welcome: ${pageContext.request.userPrincipal.name}</a>
-				<a href="<c:url value="/perform_logout" />">Logout</a>
+				<li><a>Welcome: ${pageContext.request.userPrincipal.name}</a></li>
+				<li><a href="<c:url value="/perform_logout" />">Logout</a></li>
 
 				<security:authorize access="hasRole('ROLE_USER')">
-					<a href="<c:url value="/user/home" />">Cart</a>
+					<li><a href="<c:url value="/user/home" />">Cart</a></li>
 				</security:authorize>
 
 				<security:authorize access="hasRole('ROLE_ADMIN')">
-					<a href="<c:url value="/admin/home" />">Admin Page</a>
+					<li><a href="<c:url value="/admin" />">Admin Page</a></li>
 				</security:authorize>
 
 			</c:if>
 
 			<c:if test="${pageContext.request.userPrincipal.name == null}">
-				<a href="<c:url value="/login" />">Login</a>
-				<a href="<c:url value="/signUp" />">Sign Up</a>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="<c:url value="/login" />"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+				<li><a href="<c:url value="/register" />"><span class="glyphicon glyphicon-log-in"></span>Sign Up</a></li>
+			</ul>
 			</c:if>
                   </ul>
                 </div>

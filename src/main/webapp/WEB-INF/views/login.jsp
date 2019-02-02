@@ -10,9 +10,7 @@
 			<div class="msg">${msg}</div>
 		</c:if>
 
-		<form name='loginForm'
-		  action="<c:url value='/login' />" method='POST'>
-
+		<form name='loginForm' action="<c:url value="/login" />" method="POST">
 		  <table>
 			<tr>
 				<td>User:</td>
@@ -33,4 +31,5 @@
 
 		</form>
 	</div>
+	
   <%@ include file="footer.jsp" %>
