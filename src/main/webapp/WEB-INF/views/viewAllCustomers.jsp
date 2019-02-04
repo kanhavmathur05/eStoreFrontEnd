@@ -29,10 +29,23 @@
                     <td>${customer.customerEmail}</td>
                     <td>${customer.customerPhone}</td>
                     <td>${customer.userName}</td>
-                    <td>${customer.enabled}</td>
+                    <td>
+                    <c:if test="${customer.enabled==true}">
+                    	<p class="glyphicon glyphicon-ok"/>
+                    </c:if>
+                    </td>
                 	<td><a href="<c:url value="/admin/updateCustomer/${customer.customerID}"/>">Edit</a></td>
                 </tr>
             </c:forEach>
         </table>
         </div>
     </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+<%@ include file="footer.jsp" %>

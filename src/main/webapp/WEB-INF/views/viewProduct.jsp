@@ -28,6 +28,7 @@
 		<a class="btn btn-default" href="#" class="btn btn-warning btn-large" ng-click="addToCart('${product.productID}')"><span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart</a>
 		<a class="btn btn-default" href="<c:url value="/allProducts"/>">Continue Shopping</a>
 		</div>
+		
 		</div>
 	</div>
 </div>

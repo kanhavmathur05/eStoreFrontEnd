@@ -121,8 +121,8 @@
         </div>
 -->
         <br/><br/>
-		<input type="submit" value="submit" class="btn btn-default">
-        <a href="<c:url value="/" />" class="btn btn-default">Cancel</a>
+		<input type="submit" value="submit" class="btn btn-success">
+        <a href="<c:url value="/" />" class="btn btn-danger">Cancel</a>
 
         </form:form>
     </div>

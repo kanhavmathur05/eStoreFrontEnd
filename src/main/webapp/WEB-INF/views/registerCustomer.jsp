@@ -1,21 +1,20 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ include file="header.jsp" %>
-<div class="container-wrapper">
-    <div class="container" style="max-width:400px; margin:0 auto;">
+ <!-- 
         <div class="page-header">
             <h1>Register Customer</h1>
 
             <p class="lead">Please fill in your information below</p>
         </div>
-
+ -->
         <form:form action="${pageContext.request.contextPath}/register"
-                   method="post" modelAttribute="customer" role="form">
-
-        <h3>Basic Information</h3>
+                   method="post" modelAttribute="customer" role="form" class="form-horizontal">
+		<div class="container">
+		<h3>Basic Information</h3>
         
         <div class="form-group">
             <label for="name">Name</label>
-            <form:errors path="customerName" cssStyle="color: #ff0000" />
+            <form:errors path="customerName" cssStyle="color: #ff0000" style="width:100%"/>
             <form:input path="customerName" id="name" class="form-Control" />
         </div>
 
@@ -115,11 +114,10 @@
 
         <br/><br/>
 
-        <input type="submit" value="submit" class="btn btn-default">
-        <a href="<c:url value="/" />" class="btn btn-default">Cancel</a>
+        <input type="submit" value="submit" class="btn btn-success">
+        <a href="<c:url value="/" />" class="btn btn-danger">Cancel</a>
+        </div>
         </form:form>
-    </div>
-</div>
 <!-- 
 <div class="container-wrapper">
     <div class="container" style="max-width:400px; margin:0 auto;">

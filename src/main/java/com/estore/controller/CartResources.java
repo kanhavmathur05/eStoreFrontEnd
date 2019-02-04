@@ -38,18 +38,23 @@ public class CartResources {
     private ProductService productService;
 
     @RequestMapping("/{cartID}")
-    public @ResponseBody Cart getCartByID(@PathVariable(value = "cartID") int cartID){
+    public @ResponseBody Cart getCartByID(@PathVariable(value="cartID") int cartID){
         return cartService.getCartByID(cartID);
     }
 
-    @RequestMapping(value = "/add/{productID}", method = RequestMethod.PUT)
-    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    @RequestMapping(value="/add/{productID}",method=RequestMethod.POST)
+    @ResponseStatus(value=HttpStatus.NO_CONTENT)
     public void addItem (@PathVariable(value = "productID") int productID, Principal P){
-        Customer customer=customerService.getCustomerByUsername(P.getName());
-        Cart cart = customer.getCart();
+        System.out.println("Product ID:: "+productID);
+    	Customer customer=customerService.getCustomerByUsername(P.getName());
+    	System.out.println("Product ID:: "+productID);
+    	Cart cart = customer.getCart();
+    	System.out.println("Product ID:: "+productID);
         Product product = productService.getProductByID(productID);
+        System.out.println("Product ID:: "+productID);
         List<CartItem> cartItems=cart.getCartItems();
-
+        System.out.println("Product ID:: "+productID);
+        
         for (int i=0;i<cartItems.size();i++){
             if(product.getProductID()==cartItems.get(i).getProduct().getProductID()){
                 CartItem cartItem = cartItems.get(i);
@@ -69,15 +74,14 @@ public class CartResources {
         cartItemService.addCartItem(cartItem);
     }
 
-    @RequestMapping(value = "/remove/{productID}", method = RequestMethod.PUT)
-    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    @RequestMapping(value="/remove/{productID}", method=RequestMethod.PUT)
+    @ResponseStatus(value=HttpStatus.NO_CONTENT)
     public void removeItem(@PathVariable(value = "productID") int productID){
         CartItem cartItem = cartItemService.getCartItemByProductID(productID);
         cartItemService.removeCartItem(cartItem);
-
     }
 
-    @RequestMapping(value = "/{cartID}", method = RequestMethod.DELETE)
+    @RequestMapping(value="/{cartID}", method=RequestMethod.DELETE)
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public void clearCart(@PathVariable(value = "cartID") int cartID){
         Cart cart = cartService.getCartByID(cartID);

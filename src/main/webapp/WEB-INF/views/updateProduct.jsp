@@ -3,7 +3,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 		
  
-<form:form action="${pageContext.request.contextPath }/admin/updateProduct/${productID}/?${_csrf.parameterName}=${_csrf.token}" modelAttribute="product" method="post" enctype="multipart/form-data">
+<form:form action="${pageContext.request.contextPath}/admin/updateProduct/${productID}/?${_csrf.parameterName}=${_csrf.token}" modelAttribute="product" method="post" enctype="multipart/form-data">
 
 	<div class="form-group">
 		<label for="name">Name</label>
@@ -41,6 +41,7 @@
         <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="homeentertainment"/>Home Entertainment</label>
 	</div>
 	
-	<input type="submit" value="submit"/>
+	<input type="submit" value="submit" class="btn btn-success"/>
+	<a href="<c:url value="/" />" class="btn btn-danger">Cancel</a>
 </form:form>
 <%@ include file="footer.jsp"%>

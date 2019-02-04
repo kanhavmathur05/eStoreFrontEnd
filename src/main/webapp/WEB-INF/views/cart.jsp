@@ -14,7 +14,7 @@
 
         <section class="container" ng-app="cartApp">
 
-            <div ng-controller = "cartCtrl" ng-init="initCartId('${cartID}')">
+            <div ng-controller = "cartCtrl" ng-init="initCartID('${cartID}')">
 
                 <div>
                     <a class="btn btn-danger pull-left" ng-click = "clearCart()"><span class="glyphicon glyphicon-remove-sign"></span> Clear Cart</a>

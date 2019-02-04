@@ -43,7 +43,8 @@
         <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="homeentertainment"/>Home Entertainment</label>
 	</div>
 	
-	<input type="submit" value="submit" class="btn btn-default"/>
+	<input type="submit" value="submit" class="btn btn-success"/>
+	<a href="<c:url value="/" />" class="btn btn-danger">Cancel</a>
 </form:form>
 </div>
 </div>

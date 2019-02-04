@@ -18,7 +18,7 @@
           <label for="password">Password</label>
           <input type="password" class="form-control" id="password" name="password">
         </div>
-        <button type="submit" name="submit" value="submit" class="btn btn btn-primary" style="width:100%">
+        <button type="submit" name="submit" value="submit" class="btn btn btn-success" style="width:100%">
           Log In
         </button>
         <input type="hidden" name="${_csrf.parameterName}"

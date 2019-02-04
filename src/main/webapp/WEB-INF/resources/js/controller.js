@@ -2,13 +2,13 @@ var cartApp = angular.module ("cartApp", []);
 
 cartApp.controller("cartCtrl",function($scope,$http){
 
-    $scope.refreshCart = function(){
-       $http.get('/eStore/rest/cart/' + $scope.cartID).success(function (data){
+    $scope.refreshCart=function(){
+       $http.post('/eStore/rest/cart/' + $scope.cartID).success(function (data){
            $scope.cart=data;
        });
     };
 
-    $scope.clearCart = function(){
+    $scope.clearCart=function(){
         $http.delete('/eStore/rest/cart/' + $scope.cartID).success($scope.refreshCart());
     };
 
@@ -18,7 +18,7 @@ cartApp.controller("cartCtrl",function($scope,$http){
     };
 
     $scope.addToCart = function(productID){
-        $http.put('/eStore/rest/cart/add/' + productID).success(function (){
+        $http.post('/eStore/rest/cart/add/' + productID).success(function (){
             alert('Product successfully added to the cart!');
         });
     };
