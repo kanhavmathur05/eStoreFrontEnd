@@ -1,11 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
-<script src="<c:url value="/resources/js/controller.js" /> "></script>
 <%@ include file="header.jsp"%> 	
 
-<div class="container">
+<div class="container" ng-app="cartApp">
 <div class="row">
 	<div class="col-sm-6">
 		<img alt="Image not Found" src="<c:url value="/resources/images/${product.productID}.png"/>" class="img-responsive">		

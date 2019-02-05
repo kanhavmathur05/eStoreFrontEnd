@@ -1,17 +1,15 @@
 <%@ include file="header.jsp"%> 
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-		
-<div class="container-fluid">
-  <div class="row  align-middle">
-    <div class="col-sm-2 col-offset-2">
-
-<form:form action="${pageContext.request.contextPath}/admin/addProduct?${_csrf.parameterName}=${_csrf.token}" modelAttribute="product" method="post" enctype="multipart/form-data">
 	
+<form:form action="${pageContext.request.contextPath}/admin/addProduct?${_csrf.parameterName}=${_csrf.token}" modelAttribute="product" method="post" enctype="multipart/form-data">
+<div>	
 	<div class="form-group">
 		<label for="name">Name</label>
-		<form:errors path="productName" cssStyle="color:#ff0000;" />
-        <form:input path="productName" id="name" class="form-Control" />
+		
+			<form:errors path="productName" cssStyle="color:#ff0000;" />
+        	<form:input path="productName" id="name" class="form-Control" />
+		
 	</div>
 	<div class="form-group">
 		<label for="price">Price</label>
@@ -45,8 +43,6 @@
 	
 	<input type="submit" value="submit" class="btn btn-success"/>
 	<a href="<c:url value="/" />" class="btn btn-danger">Cancel</a>
+</div>
 </form:form>
-</div>
-</div>
-</div>
 <%@ include file="footer.jsp"%>
