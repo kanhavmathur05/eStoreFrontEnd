@@ -16,9 +16,16 @@
     </view-state>
 
     <view-state id="collectShippingDetail" view="collectShippingDetail.jsp" model="order">
-        <transition on="shippingDetailCollected" to="orderConfirmation" />
+        <transition on="shippingDetailCollected" to="paymentOptionSelected" />
         <transition on="backToCollectCustomerInfo" to="collectCustomerInfo" />
     </view-state>
+    
+    
+    <view-state id="paymentOptionSelected" view="paymentOption.jsp" model="order">
+    	<transition on="paymentOptionSelected" to="orderConfirmation" />
+    	<transition on="backToCollectShippingDetail" to="collectShippingDetail"/>
+    </view-state>
+    
 
     <view-state id="orderConfirmation">
         <transition on="orderConfirmed" to="processOrder" />
