@@ -5,11 +5,9 @@
 <%@ include file="header.jsp" %>
 
 <div class="container-wrapper">
-    <div class="container">
-        <div class="page-header">
+    <div class="container" >
+        <div class="page-header" align="center">
             <h1>Customer Management Page</h1>
-
-            <p class="lead">This is the customer management page!</p>
         </div>
 
         <table class="table table-striped table-hover">
@@ -34,7 +32,7 @@
                     	<p class="glyphicon glyphicon-ok"/>
                     </c:if>
                     </td>
-                	<td><a href="<c:url value="/admin/updateCustomer/${customer.customerID}"/>">Edit</a></td>
+                	<td><a href="<c:url value="/admin/updateCustomer/${customer.customerID}"/>" class="glyphicon glyphicon-edit btn btn-default"></a></td>
                 </tr>
             </c:forEach>
         </table>

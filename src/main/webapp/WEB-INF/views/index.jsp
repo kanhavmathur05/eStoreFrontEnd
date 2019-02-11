@@ -10,16 +10,16 @@
         </ol>
       
         <!-- Wrapper for slides -->
-        <div class="carousel-inner" style="width:100%; height: 50%;">
-          <div class="item active">
-            <img src="./resources/images/carouselImage1.jpg" alt="Image 1" style="width:100%; height:100%">
+        <div class="carousel-inner" >
+          <div class="item active"  >
+            <img src="./resources/images/carouselImage1.jpg" alt="Image 1" style="width:100%">
           </div>  
           <div class="item">
-            <img src="./resources/images/carouselImage2.jpg" alt="Image 2" style="width:100%; height:100%">
+            <img src="./resources/images/carouselImage2.jpg" alt="Image 2" style="width:100%">
           </div>
       
           <div class="item">
-            <img src="./resources/images/carouselImage3.jpg" alt="Image 3" style="width:100%;  height:100%">
+            <img src="./resources/images/carouselImage3.jpg" alt="Image 3" style="width:100%">
           </div>
         </div>
       

@@ -27,11 +27,11 @@
 						src="<c:url value="/resources/images/${product.productID}.png"/>"
 						class="img-responsive" style="max-width: 100px"></td>
 					<td><a
-						href="<c:url value="viewProduct/${product.productID}"/>" class="glyphicon glyphicon-eye-open">
+						href="<c:url value="viewProduct/${product.productID}"/>" class="glyphicon glyphicon-eye-open btn btn-default">
 					</a>
 					<security:authorize access="hasRole('ROLE_ADMIN')">
-						<a	href="<c:url value="/admin/deleteProduct/${product.productID}"/>" class="glyphicon glyphicon-remove-circle"></a>
-						<a	href="<c:url value="/admin/updateProduct/${product.productID}"/>" class="glyphicon glyphicon-edit"></a>
+						<a	href="<c:url value="/admin/deleteProduct/${product.productID}"/>" class="glyphicon glyphicon-remove-circle btn btn-danger"></a>
+						<a	href="<c:url value="/admin/updateProduct/${product.productID}"/>" class="glyphicon glyphicon-edit btn btn-primary"></a>
 						
 					</security:authorize>
 				</td>

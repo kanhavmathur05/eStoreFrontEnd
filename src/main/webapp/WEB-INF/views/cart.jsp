@@ -4,10 +4,9 @@
 <div class="container-wrapper">
     <div class="container">
         <section>
-            <div class="jumbotron">
+            <div class="well">
                 <div class="container">
-                    <h1>Cart</h1>
-                    <p>All the selected products in your shopping cart</p>
+                    <h2>Cart</h2>
                 </div>
             </div>
         </section>
@@ -53,5 +52,10 @@
 </div>
 </div>
 <script src="<c:url value="/resources/js/controller.js?v3" /> "></script>
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <%@ include file="footer.jsp" %>

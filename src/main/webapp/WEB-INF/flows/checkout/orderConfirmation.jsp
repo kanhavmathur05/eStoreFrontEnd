@@ -9,9 +9,7 @@
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">
-            <h1>Order</h1>
-
-            <p class="lead">Order confirmation</p>
+            <h2 align="center">Order Confirmation</h2>
         </div>
 
         <div class="container">
@@ -23,8 +21,9 @@
                     <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
 
                        <div class="txt-center">
-                            <h1>Receipt</h1>
+                            <h1 align="center">Receipt</h1>
                        </div>
+                       <br/>
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-6">
                                 <address>
@@ -81,7 +80,7 @@
                                         <h4><strong>Grand Total:</strong></h4>
                                     </td>
                                     <td class="text-center text-danger">
-                                        <h4><strong>$ ${order.cart.grandTotal}</strong></h4>
+                                        <h4><strong class="fa fa-inr" style="margin-top:10px;">${order.cart.grandTotal}</strong></h4>
                                     </td>
                                 </tr>
 
@@ -94,11 +93,11 @@
 
                         <br/><br/>
 
-                        <button class="btn btn-default" name="_eventId_backToCollectShippingDetail">Back</button>
+                        <button class="btn btn-primary col-xs-4 col-sm-4 col-md-4" name="_eventId_backToCollectShippingDetail">Back</button>
 
-                        <input type="submit" value="Submit Order" class="btn btn-default" name="_eventId_orderConfirmed" />
+                        <input type="submit" value="Submit Order" class="btn btn-success col-xs-4 col-sm-4 col-md-4" name="_eventId_orderConfirmed" />
 
-                        <button class="btn btn-default" name="_eventId_cancel">Cancel</button>
+                        <button class="btn btn-danger col-xs-4 col-sm-4 col-md-4" name="_eventId_cancel">Cancel</button>
                     </div>
                 </form:form>
             </div>

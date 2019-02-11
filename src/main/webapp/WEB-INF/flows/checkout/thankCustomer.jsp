@@ -16,9 +16,16 @@
         </section>
 
         <section class="container">
-            <p><a href="<spring:url value="/" />" class="btn btn-default">OK</a></p>
+            <p><a href="<spring:url value="/" />" class="btn btn-default col-xs-2">OK</a></p>
         </section>
     </div>
 </div>
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <%@ include file="/WEB-INF/views/footer.jsp" %>

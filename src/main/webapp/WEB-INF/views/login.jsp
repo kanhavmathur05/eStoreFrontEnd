@@ -1,7 +1,9 @@
 <%@ include file="header.jsp" %>
 
-
-
+<div class="container" align="center">
+	<h3 align="center" style="text-decoration:underline;">Login Form</h3>
+</div>
+<div class="container" style="padding-top:20px; padding-bottom:10px;">
 	<form role="form" name='loginForm' action="<c:url value="/login" />" method="POST">
 	<div class="contiainer" style="max-width:400px; margin:0 auto;">
 		<c:if test="${not empty error}">
@@ -18,6 +20,8 @@
           <label for="password">Password</label>
           <input type="password" class="form-control" id="password" name="password">
         </div>
+        
+        <p><input type="checkbox" value="Remember me" name="Remember me">Remember me</p>
         <button type="submit" name="submit" value="submit" class="btn btn btn-success" style="width:100%">
           Log In
         </button>
@@ -25,5 +29,13 @@
 			value="${_csrf.token}" />
       </div>
       </form>
-
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
   <%@ include file="footer.jsp" %>
