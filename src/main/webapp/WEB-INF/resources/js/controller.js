@@ -17,13 +17,13 @@ cartApp.controller("cartCtrl",function($scope,$http){
         $scope.refreshCart(cartID);
     };
 
-    $scope.addToCart = function(productID){
+    $scope.addToCart=function(productID){
     	$http.post('/eStore/rest/cart/add/' + productID).success(function (){
             alert('Product successfully added to the cart!');
         });
     };
 
-    $scope.removeFromCart = function(productID){
+    $scope.removeFromCart=function(productID){
         $http.put('/eStore/rest/cart/remove/' + productID).success(function(data){
         	$scope.refreshCart();
         });

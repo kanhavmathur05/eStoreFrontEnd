@@ -22,7 +22,7 @@
 					<td>${product.productName}</td>
 					<td>${product.price}</td>
 					<td>${product.quantity}</td>
-					<td>${product.productDescription}</td>
+					<td style="max-width:500px;">${product.productDescription}</td>
 					<td><img alt="No Image Found"
 						src="<c:url value="/resources/images/${product.productID}.png"/>"
 						class="img-responsive" style="max-width: 100px"></td>

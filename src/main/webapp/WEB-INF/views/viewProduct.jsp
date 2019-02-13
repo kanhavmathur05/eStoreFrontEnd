@@ -29,5 +29,10 @@
 	</div>
 </div>
 </div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <script src="<c:url value="/resources/js/controller.js?v3" /> "></script>
 <%@ include file="footer.jsp"%>

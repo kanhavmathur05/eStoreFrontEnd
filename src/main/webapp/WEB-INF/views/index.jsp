@@ -19,7 +19,7 @@
           </div>
       
           <div class="item">
-            <img src="./resources/images/carouselImage3.jpg" alt="Image 3" style="width:100%">
+            <img src="./resources/images/laptop2.jpg" alt="Image 3" style="width:100%">
           </div>
         </div>
       
@@ -33,12 +33,11 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-
-      <br/>
       <br/>
       <section class="about py-lg-4 py-md-3 py-sm-3 py-3" id="about">
         <div class="container py-lg-5 py-md-5 py-sm-4 py-4">
            <h3 class="title text-center mb-lg-5 mb-md-4  mb-sm-4 mb-3">Best Products</h3>
+           <br/>
            <div class="row banner-below-w3l">
               <div class="col-lg-4 col-md-6 col-sm-6 text-center banner-agile-flowers">
                  <img src="./resources/images/smartwatches.jpeg" class="img-thumbnail" alt="">
@@ -47,15 +46,15 @@
                  </div>
               </div>
               <div class="col-lg-4 col-md-6 col-sm-6 text-center banner-agile-flowers">
-                 <img src="./resources/images/smartwatches.jpeg" class="img-thumbnail" alt="">
+                 <img src="./resources/images/nokiaphone.jpeg" class="img-thumbnail" alt="" style="height:320px; padding:0px;">
                  <div class="banner-right-icon">
-                    <h4 class="pt-3">Smart Watches</h4>
+                    <h4 class="pt-3">Nokia 6.1 Plus</h4>
                  </div>
               </div>
               <div class="col-lg-4 col-md-6 col-sm-6 text-center banner-agile-flowers">
-                 <img src="./resources/images/smartwatches.jpeg" class="img-thumbnail" alt="">
+                 <img src="./resources/images/GooglePixel2.jpg" class="img-thumbnail" alt="" style="height:320px; padding:0px;">
                  <div class="banner-right-icon">
-                    <h4 class="pt-3">Smart Watches</h4>
+                    <h4 class="pt-3">Google Pixel 2</h4>
                  </div>
               </div>
             </div>
